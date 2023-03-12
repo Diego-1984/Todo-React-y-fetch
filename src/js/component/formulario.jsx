@@ -12,11 +12,10 @@ const Formulario=(props)=>{
     }
     return(
         <>
-        <form onSubmit={handleSubmit} className="todo-form rounded">       
+        <form onSubmit={handleSubmit} className="rounded">       
             <input 
             value={input}
             onChange={(e)=>setImput(e.target.value)} 
-            className="todo-input" 
             placeholder="Pon aqui la tarea..."/>
             
             <button type="submit btn-outline-secondary" className="todo-boton">Agregar tarea</button>
