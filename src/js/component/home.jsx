@@ -18,11 +18,16 @@ const Home = () => {
 		let newToDos=[todo, ...todos]
 		console.log(todos)
 		setTodos(newToDos)
+	
+		};
+		const removeTodo=(id)=>{
+			let updatedTodos=[...todos].filter((todo)=>todo.id !==id);
+			setTodos(updatedTodos);
 	};
 	return (
 		<>
 		<div class="container d-flex w-50 justify-content-center bg-light">
-			<h1 className="container bg-light text-muted justify-content-center d-flex">todos</h1>
+			<h1 className="container bg-light text-muted justify-content-center d-flex">toDo</h1>
 		</div>
 
 		<div className="container d-flex w-50 justify-content-center bg-light">
@@ -32,7 +37,7 @@ const Home = () => {
 		<div className="container d-flex w-50 justify-content-center bg-light p-5">
 				
 				{todos.map((todo)=>{
-				return (<Item todo={todo}/>
+				return (<Item removeTodo={removeTodo} todo={todo} key={todo.id}/>
 				)
 			})}
 		</div>
