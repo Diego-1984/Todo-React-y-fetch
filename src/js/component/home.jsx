@@ -22,7 +22,7 @@ const Home = () => {
 	};
 	return (
 		<>
-		<div class ="container d-flex w-50 justify-content-center bg-light">
+		<div class ="container text-secondary  d-flex w-50 bg-light">
 			<h1 className="container bg-light text-muted justify-content-center d-flex">toDo</h1>
 		</div>
 
@@ -30,14 +30,14 @@ const Home = () => {
 				<p><Formulario addToDo={addTodo} /></p>
 								
 		</div>
-		<div className="container d-flex w-50 justify-content-center bg-light p-5">
+		<div className="container body w-50 p-5 bg-light">
 				
 				{todos.map((todo)=>{
 				return (<Item removeTodo={removeTodo} todo={todo} key={todo.id}/>
 				)
 			})}
 		</div>
-		<div className="conatiner text-secondary container d-flex w-50 bg-light">
+		<div className="container footer text-secondary  d-flex w-50 bg-light">
 			<p>Tareas pendientes {todos.length}</p>
 		</div>
 		</>

@@ -1,15 +1,17 @@
 .container { 
     background: gray; 
-   height: 157px;
+   height: 50px;
    }
-/* 
+   .footer { 
+    background: gray; 
+   height: 30px;
+   }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+   .header { 
+    background: gray; 
+   height: 50px;
+   }
+   
+   .body{
+    height: 499px;
+   }
