@@ -11,13 +11,13 @@ const Home = () => {
 			id.todos = todos[0].id +1
 		}
 		let todo={id:id, text: text, completed:false}
-		let newTodos=[todo, ...todos]
+		let newTodos=[...todos, todo]
 		console.log(newTodos)
 		setTodos(newTodos)
 	
 		};
 		const removeTodo=(id)=>{
-			let updatedTodos=[...todos].filter((todo)=>todo.id !==id);
+			let updatedTodos= todos.filter((todo)=>todo.id !==id);
 			setTodos(updatedTodos);
 	};
 	return (
