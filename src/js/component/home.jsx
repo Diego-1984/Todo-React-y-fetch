@@ -6,10 +6,7 @@ import Item from "./item.jsx"
 const Home = () => {
 	const [todos, setTodos]=useState([]);
 	const addTodo=(text)=>{
-		let id = 1;
-		if(todos.length > 0){
-			id.todos = todos[0].id +1
-		}
+		let id = [];		
 		let todo={id:id, text: text, completed:false}
 		let newTodos=[...todos, todo]
 		console.log(newTodos)
