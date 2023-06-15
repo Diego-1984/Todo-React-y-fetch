@@ -1,6 +1,6 @@
 //ver lista de tareas
 
-const getTodos =async()=>{
+export const getTodos =async()=>{
   const resp = await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr',
    {
       method: "GET",
@@ -9,12 +9,12 @@ const getTodos =async()=>{
       }
     })
   const data = await resp.json()
-  console.log(data)
+  return data
 }
 
 //CREAR TAREA
 
-const addTodo =async(task)=>{
+export const addTodo =async(task)=>{
   const resp = await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
       method: "POST",
       body: JSON.stringify(task) ,
@@ -23,12 +23,12 @@ const addTodo =async(task)=>{
       }
     })
     const data = await resp.json()
-    console.log(data)
+    return data
 }
 
 //actualizar tarea
 
-const upDateTodos =async(todos)=>{
+export const upDateTodos =async(todos)=>{
   const resp = await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
       method: "PUT",
       body: JSON.stringify(todos),
@@ -37,7 +37,7 @@ const upDateTodos =async(todos)=>{
       }
     })
     const data = await resp.json()
-    console.log(data)
+    return data
 }
 
 
