@@ -14,7 +14,7 @@ export const getTodos =async()=>{
 
 //CREAR TAREA
 
-export const addTodo =async(task)=>{
+export const addTodoInServer =async(task)=>{
   const resp = await fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr', {
       method: "POST",
       body: JSON.stringify(task) ,
