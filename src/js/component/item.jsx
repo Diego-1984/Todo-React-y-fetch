@@ -4,7 +4,7 @@ const Item=(props)=>{
     const{todo, removeTodo}=props
     return(
         <>
-        <div className="row w-100 border border-dark p-2 rounded bg-white my-3">
+        <div className="row w-100 border border-dark p-2 rounded bg-white mt-2">
             <div className="col-11">{props.todo.label}</div>
             <div className="col-1"><AiOutlineCloseCircle onClick={()=>removeTodo(todo.id)}/></div>                 
             

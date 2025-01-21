@@ -12,6 +12,13 @@
    height: 50px;
    }
    
-   .body{
-    height: 499px;
-   }
+   .body {
+    min-height: 66vh;
+    height: auto;      
+    display: flex;    
+    flex-direction: column; 
+    }
+    .row{
+        margin-left: 0px;
+    }
+
